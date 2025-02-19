@@ -319,3 +319,19 @@ input {
     font-size : var(--smaller-font-size);
     margin-bottom : .25rem;
 }
+
+.portfolio__title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--weight-600);
+    margin-bottom: 0.75rem;
+}
+
+.portfolio__description {
+    font-weight: var(--weight-400);
+    display: none;
+}
+
+/* work hover */
+.portfolio__item:hover::after {
+    opacity: 1;
+}
