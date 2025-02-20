@@ -277,7 +277,7 @@ input {
 }
 
 /* ===== Work ===== */
-.portfolio {
+/* .portfolio {
     background-color: var(--container-color);
 }
 
@@ -300,7 +300,7 @@ input {
     content: '';
     inset: 0;
     background: linear-gradient(180deg, transparent, var(--first-color));
-    opacity: 0 ;  
+    opacity: 0;  
 }
 
 .portfolio__data {
@@ -329,9 +329,9 @@ input {
 .portfolio__description {
     font-weight: var(--weight-400);
     display: none;
-}
+} */
 
 /* work hover */
-.portfolio__item:hover::after {
+/* .portfolio__item:hover::after {
     opacity: 1;
-}
+} */
