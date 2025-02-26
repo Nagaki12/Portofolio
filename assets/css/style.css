@@ -64,6 +64,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 input,
 textarea,
 body{
@@ -136,6 +140,109 @@ input {
     max-width: 600px;
     margin-inline: auto;
     margin-bottom: 3.75rem;
+}
+
+/* ===== Header & Nav ===== */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
+}
+
+.nav,
+.nav__list,
+.nav__socials {
+    display: flex;
+}
+
+.nav {
+    height: calc(var(--header-height) + 1.5rem);
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3.5rem;
+}
+
+.nav__logo {
+    color: var(--title-color);
+    font-size: 2.3rem;
+    font-weight: var(--weight-700);
+}
+
+.nav__logo span {
+    color: var(--first-color);
+}
+
+.nav__list {
+    column-gap: 2rem;
+}
+
+.nav__link,
+.nav__social-link {
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    transition: all 0.3s var(--transition);
+}
+
+.nav__link {
+    font-weight: var(--weight-500);
+}
+
+.nav__socials {
+    column-gap: 1.5rem;
+    margin-left: auto;
+}
+
+.nav__social-link:hover {
+    color: var(--first-color);
+    transform: translateY(-0.25rem);
+}
+
+/* .nav__link-btn {
+    font-size: var(--smaller-font-size);
+    background-color: transparent;
+    border-color: var(--border-color);
+    padding: 0.625rem 1.25rem;
+}
+
+.nav__link-btn:hover {
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    color: var(--title-color);
+} */
+
+.nav__toggle,
+.nav__close {
+    display: none;
+}
+
+/*  Activate Link  */
+.activate-link,
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+/* Change Background header */
+.scroll-header {
+    position: fixed;
+    background-color: var(--container-color);
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25); 
+    animation: slide-down 0.7s;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scroll-header .nav {
+    height: var(--header-height);
 }
 
 /* ===== Home ===== */
@@ -405,4 +512,30 @@ input {
     font-size: var(--small-font-size);
     font-weight: var(--weight-400);
     justify-self: flex-end;
+}
+
+/* ===== Scroll Up ===== */
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--title-color);
+    display: grid;
+    place-items: center;
+    z-index: var(--z-fixed);
+    transition: all 0.4s var(--transition);
+}
+
+.scrollup__icon {
+    color: var(--first-color);
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+/* Show Scroll Up */
+.show-scroll {
+    bottom: 3rem;
 }
