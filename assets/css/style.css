@@ -178,9 +178,14 @@ input {
     column-gap: 2rem;
 }
 
-.nav__link,
-.nav__social-link {
+.nav__link{
     font-size: var(--small-font-size);
+    color: var(--title-color);
+    transition: all 0.3s var(--transition);
+}
+
+.nav__social-link {
+    font-size: var(--h3-font-size);
     color: var(--title-color);
     transition: all 0.3s var(--transition);
 }
@@ -191,7 +196,7 @@ input {
 
 .nav__socials {
     column-gap: 1.5rem;
-    margin-left: auto;
+    margin-right: 10rem;
 }
 
 .nav__social-link:hover {
